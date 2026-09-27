@@ -16,7 +16,7 @@ START hilow_game
     OUTPUT "Enter the upper bound:"
     INPUT upper_bound
 
-WHILE lower_bound >= upper_bound
+    WHILE lower_bound >= upper_bound
     OUTPUT "The lower bound must be less than the upper bound."
     OUTPUT "Enter the lower bound:"
     INPUT lower_bound
@@ -32,12 +32,12 @@ END WHILE
     INPUT guess
 
     WHILE guess < lower_bound OR guess > upper_bound
-        OUTPUT " Your guess must be between the lower and upper bounds."
+        OUTPUT "Your guess must be between the lower and upper bounds."
         OUTPUT "Guess another number:"
         INPUT guess
     END WHILE
 
-    WHILE guess != random number
+    WHILE guess != random_number
         IF guess < random_number THEN
             OUTPUT "Nope, too low."
         ELSE IF guess > random_number THEN
@@ -47,13 +47,15 @@ END WHILE
         OUTPUT "Guess another number:"
         INPUT guess
 
-        WHILE guess < lower_bound OR guess> upper_bound
+        WHILE guess < lower_bound OR guess > upper_bound
             OUTPUT "Your guess must be between the lower and upper bounds."
             OUTPUT "Guess another number:"
             INPUT guess
         END WHILE
 
-        OUTPUT "You got it!"
+    END WHILE
+
+    OUTPUT "You got it!"
     
 END hilow_game
 
